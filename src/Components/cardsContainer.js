@@ -2,20 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import GistCard from './gistCard';
 
-const containerStyle = {
-    height: '100%',
-}
+const CLASS_LISTING = 'listing';
 
 class CardsContainer extends React.Component {
 
     render() {
         return (
-            <div style={containerStyle}>
-                {
-                this.props.gists?.map(gist => (
+            <main>
+                <div className={CLASS_LISTING}>
+                {this.props.gists?.map(gist => (
                     <GistCard gist={gist}/>
                 ))}
-            </div>
+                </div>
+            </main>
         )
     }
 }

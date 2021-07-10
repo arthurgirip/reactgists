@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root{
+  --font-default: 'Roboto', sans-serif;
+  --color-default: #000000;
+  --color-alt1: #1e2a3e;
+  --color-alt2: #ffffff;
+  --color-alt3: #33435c;
+  --color-alt4: #dde2e4;
+  --color-alt5: #cccccc;
+  --color-alt6: #edf0f2;
+  --color-alt7: #3e85cf;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.gist-item{
+    border: 1px solid var(--color-alt5);
+    border-radius: 5px;
+    margin: 10px auto;
+    overflow: hidden;
+    padding: 10px;
+    background: var(--color-alt6);
+    font-weight: 300;
+    font-size: .8em;
+    min-width: 250px;
+    max-width: 300px;
+    flex: 0 0 33%;
+}
+.gist-item > *{
+    padding: 5px 0;
+}
+.gist-item a{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--color-alt3);
+}
+.gist-item a:hover{
+    text-decoration: underline;
+    color: var(--color-alt7);
+}
+.label{
+    font-weight: 600;
+    padding-right: 5px;
+}
+.tags{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.tag {
+    display: inline-flex;
+    align-items: center;
+    padding-right: 5px;
+}
+.tag span{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #ccc;
+    display: inline-block;
+    margin-right: 3px;
+}
+.forks {
+    display: flex;
+    overflow: hidden;
+}

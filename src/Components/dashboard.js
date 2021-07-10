@@ -3,15 +3,11 @@ import ReactDOM from 'react-dom';
 import CardsContainer from './cardsContainer';
 import HeaderBar from './headerBar';
 import axios from 'axios';
-
-const dashboardStyle = {
-    height: '100%',
-    width: '100%'
-};
+import '../Styles/dashboard.css'
 
 class Dashboard extends React.Component {
     state = {
-        username: 'tanerdogan',
+        username: 'alexwebr',
         gists: []
     }
 
@@ -39,10 +35,10 @@ class Dashboard extends React.Component {
 
     render() {
       return (
-        <div style={dashboardStyle}>
+        <>
             <HeaderBar callFromParent = {this.searchName.bind(this)}/>
             <CardsContainer gists={this.state.gists} />
-        </div>
+        </>
       )
     }
 }

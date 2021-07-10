@@ -5,10 +5,10 @@ import axios from 'axios';
 
 const containerStyle = {
     height: '100%',
+    display: 'flex'
 }
 
 class Forks extends React.Component {
-    
     constructor(props) {
         super(props);
 
@@ -30,14 +30,21 @@ class Forks extends React.Component {
             })
     }
 
+    getForksString() {
+        const toReturn = [];
+        if(this.state.forks.length === 0){
+            return '0';
+        }
+        this.state.forks.slice(0, 3).map(f => {
+            toReturn.push(f.owner.login)
+        });
+        return toReturn.join(', ');
+    }
+
     render() {
         return (
             <div style={containerStyle}>
-                {this.state.forks.slice(0, 3).map(f => (
-                    <div color='green'>
-                        {f.owner.login}
-                    </div>
-                ))}
+                {this.getForksString()}
             </div>
         )
     }
