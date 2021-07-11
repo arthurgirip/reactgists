@@ -2,6 +2,12 @@
 
 Gist Listing App is a web app developed mainly using react
 
+## Demo
+
+Deployed a demo here: https://arthurgirip.github.io/reactgists/.
+
+I know heorku would have been preffered, but this was easier for the task :D
+
 ## Usage
 
 To use it simply input the desired git username inside the searchbar and hit either enter or the search button and all gists created by that user will be listed below with the title of the first file inside the gist as well as the last 3 forks and the tags related to the filetypes.
